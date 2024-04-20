@@ -83,7 +83,11 @@ def about():
 @auth_bp.route('/menu')
 def menu():
     return render_template('menu.html')
-
+@app.before_request
+def before_request():
+    url = request.url.replace("https://", "http://", 1)
+    code = 301
+    return redirect(url, code=code)
 @auth_bp.route('/registerlugage', methods=['POST'])
 def registerlugage():
     cursor = db.cursor()
