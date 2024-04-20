@@ -8,7 +8,7 @@ db = mysql.connector.connect(
     host="food.ctei4ke8guph.us-east-2.rds.amazonaws.com",
     user="root",
     password="rootkoushik",
-    database="food"
+    database="FOOD"
 )
 
 
