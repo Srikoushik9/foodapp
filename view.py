@@ -32,7 +32,7 @@ def login():
     cursor.execute("SELECT * FROM user WHERE username = %s AND password = %s", (username, password))
     result = cursor.fetchone()
     if result:
-        return 'Succesfully logged in'
+        return render_template('menu.html')
     else:
         return 'Login failed'
 
@@ -52,7 +52,7 @@ def register():
        
         cursor.execute("INSERT INTO user (username, password) VALUES (%s, %s)", (username, password))
         db.commit()
-        return render_template('home.html')
+        return render_template('login.html')
 
 def get_users():
     cursor = db.cursor()
@@ -71,7 +71,7 @@ def trackregister():
 def track():
     cursor = db.cursor()
     username=request.form['id']
-    cursor.execute("SELECT * FROM foodorder where cname=%s",(username,))
+    cursor.execute("SELECT * FROM `orders` where customer_name=%s",(username,))
     result_set = cursor.fetchall()
     column_names = [desc[0] for desc in cursor.description]
     return render_template('users.html', users=result_set, column_names=column_names)
@@ -83,8 +83,9 @@ def about():
 @auth_bp.route('/menu')
 def menu():
     return render_template('menu.html')
-@auth_bp.route('/registerlugage', methods=['POST'])
-def registerlugage():
+
+@auth_bp.route('/registerorder', methods=['POST'])
+def registerorder():
     cursor = db.cursor()
     cname = request.form['name']
     nol = request.form['nol']
@@ -93,8 +94,8 @@ def registerlugage():
 
 
 
-    cursor.execute("INSERT INTO foodorder (cname,nol,dest) VALUES (%s, %s,%s)", (cname, nol,dest))
+    cursor.execute("INSERT INTO `orders` (customer_name,order_details,address,status) VALUES (%s,%s,%s,'Confirmed')", (cname, nol,dest))
     db.commit()
-    return render_template('home.html')
+    return render_template('track.html')
 
 
