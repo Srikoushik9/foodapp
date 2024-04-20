@@ -5,9 +5,9 @@ import mysql.connector
 
 
 db = mysql.connector.connect(
-    host="localhost",
+    host="food.ctei4ke8guph.us-east-2.rds.amazonaws.com",
     user="root",
-    password="",
+    password="rootkoushik",
     database="food"
 )
 
