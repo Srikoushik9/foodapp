@@ -1,153 +1,114 @@
-
-*{
-  margin: 5px;
-  padding: 5px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
- 
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-  }
+  margin: 0;
+}
 
-  header {
-    background-color:#9acd32;
-    color: #7b9ee9;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 10px;
-  }
+header {
+  background-color: #9acd32;
+  color: #7b9ee9;
+  padding: 10px 0;
+}
 
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav li.login-link {
-    margin-left: auto; 
-  }
- 
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav ul li a:hover {
-    background-color: #555;
-  }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
 
-.aboutfoodtrack{
-  height: 60vh;
-  width: 100%;
-  padding: 30px 0;
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav li.login-link {
+  margin-left: auto; 
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+.aboutfoodtrack {
   background: #ddd;
+  padding: 30px;
 }
-.pic{
-  height: auto;
-  width:  302px;
-}
-.about{
-  width: 1130px;
+
+.about {
   max-width: 85%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.text{
-  width: 1920px;
+
+.text {
+  width: 100%;
 }
-.text h3{
+
+.text h3 {
   font-size: 42px;
   font-weight: 800;
   margin-bottom: 20px;
-
 }
-.text h4{
+
+.text h4 {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 20px;
 }
-span{
-  color: #4070f4;
-}
-.text p{
+
+.text p {
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 1px;
 }
-.data{
-  margin-top: 30px;
-}
-.hire{
-  font-size: 18px;
-  background: #4070f4;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  padding: 8px 25px;
-  border-radius: 6px;
-  transition: 0.5s;
-}
-.hire:hover{
-  background: #000;
-  border: 1px solid #4070f4;
+
+.Group {
+  background: #ddd;
+  padding: 30px;
 }
 
-.ben {
-    width: 50%;
-    padding: 0 15px;
-    text-align: left;
-  }
-  
-  .Group-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: left;
-    left: 26%;
-    bottom: 1%;
-    position: absolute;
-  }
-  
-  .Group-member {
-    width: 30%;
-    margin-bottom: 50px;
-    text-align: left;
-  }
-  
-  .Group-member img {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 50%;
-  }
-  
-  .Group-member h4 {
-    margin-bottom: 5px;
-  }
-  
-  .Group-member p {
-    margin: 0;
-  }
-  
-  
-  
-  
+.Group h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.Group-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Group-member {
+  width: 48%;
+  margin-bottom: 30px;
+}
+
+.Group-member h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.Group-member h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
