@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Beverage company Order System - Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('view.index') }}">Home</a></li>
+                <li><a href="{{ url_for('view.menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('view.tracking') }}">Search where is your food</a></li>
+                <li class="login-link"><a href="{{ url_for('view.loginpage') }}">Login</a></li>
+                <li><a href="{{ url_for('view.about') }}">About Group 8</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bheem">
+            <img src="{{ url_for('static', filename='home1.jpg') }}" alt="Food image error!">
+        </section>
+        <section class="raju">
+            <h1><strong>CNM PROJECT DEMO</strong></h1>
+            <p><strong> Relax! Just click on your device, food will be on your doorstep</strong></p>
+            <h2>Why only you should order from our WEBSITE:</h2>
+            <ol>
+                <li>You can check every step of your food</li>
+                <li>Updates on every stage</li>
+                <li>Lot of restaurants to choose</li>
+                <li>Can Order bulk, for parties</li>
+            </ol>
+            <div class="tracking">
+                <h1>Just enter food Delivery ID</h1>
+	            <form action="/track" method="POST">
+		        <label for="id">Enter your delivery ID:</label>
+		        <input type="text" id="id" name="id" required>
+		        <button type="submit">Track</button>
+	            </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food and Beverage company Order System -Menu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+</head>
+
+<body>
+      <header>
+        <nav>
+            <ul>
+              <li><a href="{{ url_for('view.index') }}">Home</a></li>
+              <li><a href="{{ url_for('view.menu') }}">Menu</a></li>
+              <li><a href="{{ url_for('view.tracking') }}">Search where is your food</a></li>
+              <li class="login-link"><a href="{{ url_for('view.loginpage') }}">Login</a></li>
+              <li><a href="{{ url_for('view.about') }}">About Group 8</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="container">
+    <div class="menu">
+      <h2 class="menu-group-heading">
+        The Heartland Chow
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="{{ url_for('static', filename='burger.jpg') }}" alt="Burger">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Burger</span>
+              <span class="menu-item-price">$12.90</span>
+            </h3>
+            <p class="menu-item-description">
+              “Tasty, delicious, and has me craving more on the first bite.” to “Juicy, mouthwatering, tasty, and everything you’d ever want to savor.”
+            </p>
+            <button>Add to cart</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img class="menu-item-image" src="{{ url_for('static', filename='pizza_.jpeg') }}" alt="Pizza">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Pizza</span>
+              <span class="menu-item-price">$9.90</span>
+            </h3>
+            <p class="menu-item-description">
+              A flat, open-faced baked pie of Italian origin, consisting of a thin layer of bread dough topped with spiced tomato sauce and cheese, sausage slices, mushrooms, etc.
+            </p>
+            <button>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <h2 class="menu-group-heading">
+        Hyderabadi Special
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="{{ url_for('static', filename='biryani.jpg') }}" alt="Biryani">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Hyderabadi Biryani</span>
+              <span class="menu-item-price">$24.90</span>
+            </h3>
+            <p class="menu-item-description">
+              Simply put, biryani is a spiced mix of meat and rice, traditionally cooked over an open fire in a leather pot.
+            </p>
+            <button>Add to cart</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img class="menu-item-image" src="{{ url_for('static', filename='haleem.jpg') }}" alt="Haleem">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Hyderabadi Haleem</span>
+              <span class="menu-item-price">$19.90</span>
+            </h3>
+            <p class="menu-item-description">
+              Haleem is a stew composed of meat, lentil and pounded wheat made into a thick paste. It originated as an Arabic dish and was introduced to the Hyderabad state (India) by the Arab diaspora during the Nizam of Hyderabad's rule.
+            </p>
+            <button>Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
