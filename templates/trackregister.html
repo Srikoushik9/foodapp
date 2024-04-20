@@ -13,15 +13,15 @@
             <ul>
                 <li><a href="{{ url_for('view.index') }}">Home</a></li>
                 <li><a href="{{ url_for('view.menu') }}">Menu</a></li>
-                <li><a href="{{ url_for('view.tracking') }}">Search where is your food</a></li>
-                <li class="login-link"><a href="{{ url_for('view.loginpage') }}">Login</a></li>
-                <li><a href="{{ url_for('view.about') }}">About Group 8</a></li>
+                <li><a href="{{ url_for('view.tracking') }}">Track</a></li>
+                <li class="login-link"><a href="{{ url_for('view.trackregister') }}">Register Order</a></li>
+                <li class="login-link"><a href="{{ url_for('view.loginpage') }}">Logout</a></li>
             </ul>
         </nav>
     </header>
 	<main>
-	<h1>Register</h1>
-	<form action="{{ url_for('view.registerlugage') }}" method="post">
+	<h1>Register Order</h1>
+	<form action="{{ url_for('view.registerorder') }}" method="post">
 		<label for="name">Customer Name:</label>
 		<input type="text" id="name" name="name"><br><br>
         <label for="nol">food order:</label>
