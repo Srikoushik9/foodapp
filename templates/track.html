@@ -12,21 +12,18 @@
             <ul>
                 <li><a href="{{ url_for('view.index') }}">Home</a></li>
                 <li><a href="{{ url_for('view.menu') }}">Menu</a></li>
-                <li><a href="{{ url_for('view.tracking') }}">Search where is your food</a></li>
-                <li class="login-link"><a href="{{ url_for('view.loginpage') }}">Login</a></li>
-                <li><a href="{{ url_for('view.about') }}">About Group 8</a></li>
+                <li><a href="{{ url_for('view.tracking') }}">Track</a></li>
+                <li class="login-link"><a href="{{ url_for('view.trackregister') }}">Register Order</a></li>
+                <li class="login-link"><a href="{{ url_for('view.loginpage') }}">Logout</a></li>
             </ul>
         </nav>
     </header>
 	<main>
 	<h1>Order Tracking</h1>
 	<form action="/track" method="post">
-		<label for="id">Delivery ID:</label>
+		<label for="id">Customer Name</label>
 		<input type="text" id="id" name="id" required><br><br>
 		<button type="submit">Track your order</button>
-		<p class="form__text">
-			<a class="form__link" href="{{ url_for('view.trackregister') }}" id="linkCreateAccount">Not yet placed any order? click here to place the order</a>
-		</p>
 	</form>
 	
 </main>
